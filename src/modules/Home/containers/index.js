@@ -4,24 +4,26 @@ import HomeView from '../components/';
 import { changeName } from 'Redux/actions';
 
 export class Home extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       name: 'Abhi',
-      pass: '123',
+      pass: '123'
     };
   }
-  render () {
+  render() {
     console.log(this.props);
     return (
       <div>
         <HomeView />
       </div>
-    )
+    );
   }
 }
 
-Home.propTypes = {};
+Home.propTypes = {
+  name: PropTypes.Object
+};
 
 export function mapStateToProps(state) {
   return {
