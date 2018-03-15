@@ -3,4 +3,4 @@ const CONFIG = {
   search: 'apiJson.php'
 };
 
-export {CONFIG};
+export { CONFIG };

@@ -1,4 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": "prismatik"
+  "extends": "prismatik",
+  "rules": {
+    "semi": 2,
+    "jsx-quotes": [2, "prefer-single"],
+    "quotes": [2, "single"],
+    "indent": [2, 2]
+  }
 }

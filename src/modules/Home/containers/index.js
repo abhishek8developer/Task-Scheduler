@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import HomeView from '../components/';
-import { changeName } from 'Redux/actions';
+import LandingBanner from '../components/LandingBanner';
+import { changeName } from '../../../redux/actions';
 
 export class Home extends React.Component {
   constructor(props) {
@@ -12,10 +12,9 @@ export class Home extends React.Component {
     };
   }
   render() {
-    console.log(this.props);
     return (
-      <div>
-        <HomeView />
+      <div className='container-fluid'>
+        <LandingBanner />
       </div>
     );
   }

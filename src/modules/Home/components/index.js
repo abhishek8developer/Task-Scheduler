@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-const HomeView = ( ) =>
+const HomeView = () =>
   <div className='container-fluid'>
     <div className='row'>
       <div className='col-md-12'>
-        <input type="text" />
+        <input type='text' />
         <p>Hello</p>
       </div>
     </div>
