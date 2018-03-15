@@ -8,7 +8,7 @@ var environments = {
         alias: {
             src:        `${projectRoot}/src`,
             Components: `${projectRoot}/src/components`,
-            Containers: `${projectRoot}/src/containers`,
+            Assets:     `${projectRoot}/src/assets`,
             Modules:    `${projectRoot}/src/modules`,
             Redux:      `${projectRoot}/src/redux`,
             Styles:     `${projectRoot}/src/styles`
@@ -48,7 +48,7 @@ var environments = {
         alias: {
             src:        `${projectRoot}/src`,
             Components: `${projectRoot}/src/components`,
-            Containers: `${projectRoot}/src/containers`,
+            Assets:     `${projectRoot}/src/assets`,
             Modules:    `${projectRoot}/src/modules`,
             Redux:      `${projectRoot}/src/redux`,
             Styles:     `${projectRoot}/src/styles`
