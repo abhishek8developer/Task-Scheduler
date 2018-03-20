@@ -14,14 +14,13 @@ export class Home extends React.Component {
   render() {
     return (
       <div className='container-fluid'>
-        <LandingBanner data={this.state.name}/>
+        <LandingBanner data={this.state.name} />
       </div>
     );
   }
 }
 
 Home.propTypes = {
-  name: PropTypes.Object
 };
 
 export function mapStateToProps(state) {

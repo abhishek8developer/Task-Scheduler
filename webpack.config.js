@@ -1,23 +1,23 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 const projectRoot = process.cwd();
 
-var environments = {
+const environments = {
   development: {
     resolve: {
-        alias: {
-            src:        `${projectRoot}/src`,
-            Components: `${projectRoot}/src/components`,
-            Assets:     `${projectRoot}/src/assets`,
-            Modules:    `${projectRoot}/src/modules`,
-            Redux:      `${projectRoot}/src/redux`,
-            Styles:     `${projectRoot}/src/styles`
-        }
+      alias: {
+        src: `${projectRoot}/src`,
+        Components: `${projectRoot}/src/components`,
+        Assets: `${projectRoot}/src/assets`,
+        Modules: `${projectRoot}/src/modules`,
+        Redux: `${projectRoot}/src/redux`,
+        Styles: `${projectRoot}/src/styles`
+      }
     },
-    context: __dirname + '/src',
+    context: `${__dirname}/src`,
     entry: {
       javascript: './index.js',
-      html: './index.html',
+      html: './index.html'
     },
     module: {
       loaders: [
@@ -28,13 +28,13 @@ var environments = {
         },
         {
           test: /\.html$/,
-          loader: 'file?name=[name].[ext]',
+          loader: 'file?name=[name].[ext]'
         }
       ]
     },
     output: {
       filename: 'index.js',
-      path: __dirname + '/dist',
+      path: `${__dirname}/dist`
     },
     devServer: {
       inline: true,
@@ -45,39 +45,39 @@ var environments = {
 
   production: {
     resolve: {
-        alias: {
-            src:        `${projectRoot}/src`,
-            Components: `${projectRoot}/src/components`,
-            Assets:     `${projectRoot}/src/assets`,
-            Modules:    `${projectRoot}/src/modules`,
-            Redux:      `${projectRoot}/src/redux`,
-            Styles:     `${projectRoot}/src/styles`
-        }
+      alias: {
+        src: `${projectRoot}/src`,
+        Components: `${projectRoot}/src/components`,
+        Assets: `${projectRoot}/src/assets`,
+        Modules: `${projectRoot}/src/modules`,
+        Redux: `${projectRoot}/src/redux`,
+        Styles: `${projectRoot}/src/styles`
+      }
     },
-    context: __dirname + '/src',
+    context: `${__dirname}/src`,
     entry: {
       javascript: './index.js',
-      html: './index.html',
+      html: './index.html'
     },
     module: {
       loaders: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loaders: ['babel'],
+          loaders: ['babel']
         },
         {
           test: /\.html$/,
-          loader: 'file?name=[name].[ext]',
+          loader: 'file?name=[name].[ext]'
         }
       ]
     },
     plugins: [
-      new webpack.optimize.UglifyJsPlugin({minimize: true})
+      new webpack.optimize.UglifyJsPlugin({ minimize: true })
     ],
     output: {
       filename: 'index.js',
-      path: __dirname + '/dist',
+      path: `${__dirname}/dist`
     }
   }
 }

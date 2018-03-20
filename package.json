@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "NODE_ENV=development webpack-dev-server --watch --hot --inline && npm run build-css",
+    "start": "NODE_ENV=development webpack-dev-server --watch --hot --inline",
     "build": "NODE_ENV=production webpack",
     "watch-main-css": "cpx \"./src/content/stylesheets/main.css\" \"./src\" --update --watch",
     "test": "./node_modules/.bin/_mocha",

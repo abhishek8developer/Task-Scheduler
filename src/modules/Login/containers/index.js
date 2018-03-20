@@ -5,43 +5,44 @@ import { login } from 'Redux/login/actions/';
 
 
 export class Login extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       name: 'Abhi',
-      pass: '123',
+      pass: '123'
     };
   }
-  onSubmit(){
+  onSubmit() {
     this.props.onSubmit(this.state);
   }
-  render () {
-    console.log(this.props);
+  render() {
     return (
       <div>
         <LoginForm
           state={this.state}
-          onNameChange={(e) => this.setState({name: e.target.value})}
-          onPassChange={(e) => this.setState({pass: e.target.value})}
-          onSubmit={this.onSubmit.bind(this)}
+          onNameChange={(e) => this.setState({ name: e.target.value })}
+          onPassChange={(e) => this.setState({ pass: e.target.value })}
+          onSubmit={this.onSubmit}
         />
       </div>
-    )
+    );
   }
 }
 
-Login.propTypes = {};
+Login.propTypes = {
+  onSubmit: PropTypes.func
+};
 
 const mapStateToProps = (state) => {
   return {
     name: state.login
   };
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSubmit: (credentials) => dispatch(login(credentials)),
+    onSubmit: (credentials) => dispatch(login(credentials))
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
