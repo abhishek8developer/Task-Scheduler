@@ -4,8 +4,10 @@
   "description": "Task Scheduler",
   "main": "dist/app.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --watch --hot --inline",
+    "build-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "NODE_ENV=development webpack-dev-server --watch --hot --inline && npm run build-css",
     "build": "NODE_ENV=production webpack",
+    "watch-main-css": "cpx \"./src/content/stylesheets/main.css\" \"./src\" --update --watch",
     "test": "./node_modules/.bin/_mocha",
     "autotest": "./node_modules/.bin/_mocha --watch"
   },
@@ -20,7 +22,9 @@
   },
   "homepage": "https://github.com/abhishek8developer/Task-Scheduler",
   "dependencies": {
+    "cpx": "^1.5.0",
     "history": "^2.0.1",
+    "node-sass-chokidar": "^1.1.2",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-redux": "^4.4.1",
