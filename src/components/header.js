@@ -1,11 +1,13 @@
 
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-const Header = ({}) =>
+const Header = () =>
   <div className='row'>
     <div className='col-md-12'>
-      <a href='#/'> Home</a>
-      <a href='#/login'> Login </a>
+      <div className='menu-container'>
+        <a className='menu home' href='#/'> Home</a>
+        <a className='menu login' href='#/login'> Login </a>
+      </div>
     </div>
   </div>;
 

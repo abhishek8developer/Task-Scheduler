@@ -1,6 +1,12 @@
-import { PropTypes } from 'react';
+import React, { PropTypes } from 'react';
+import Header from 'Components/header';
 
-const App = (props) => (props.children);
+const App = (props) => (
+  <div className='container-fluid'>
+    <Header />
+    {props.children}
+  </div>
+);
 
 App.propTypes = {
   children: PropTypes.any

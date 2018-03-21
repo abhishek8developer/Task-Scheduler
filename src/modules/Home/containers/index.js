@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import LandingBanner from '../components/LandingBanner';
 import { changeName } from '../../../redux/actions';
@@ -13,7 +13,7 @@ export class Home extends React.Component {
   }
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='row'>
         <LandingBanner data={this.state.name} />
       </div>
     );

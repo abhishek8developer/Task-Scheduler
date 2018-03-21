@@ -9,7 +9,8 @@ Task Assignee and Manager
 
 ```
 npm install
-npm run dev
+Terminal 1 npm start            // to watch project
+Terminal 2 npm run build-css    // to watch scss
 ```
 
 Browse to `http://localhost:9000`.

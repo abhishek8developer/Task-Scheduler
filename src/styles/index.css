@@ -1,3 +1,22 @@
+.menu-container {
+  margin: 0 auto;
+  display: table;
+  position: relative; }
+  .menu-container .menu {
+    display: block;
+    padding: 10px 25px;
+    font-family: Tuna;
+    float: left;
+    color: black;
+    text-decoration: none; }
+    .menu-container .menu:hover {
+      text-decoration: none; }
+
+.landing-banner {
+  height: calc(100vh - 40px);
+  background: url("../../../src/assets/md/street-calender.jpg") center center no-repeat;
+  background-size: cover; }
+
 .dataa {
   display: block; }
 
