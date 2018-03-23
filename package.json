@@ -6,8 +6,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "NODE_ENV=development webpack-dev-server --watch --hot --inline",
-    "build": "NODE_ENV=production webpack",
-    "watch-main-css": "cpx \"./src/content/stylesheets/main.css\" \"./src\" --update --watch",
+    "build": "NODE_ENV=production webpack && cp -a ./src/styles/index.css ./dist/",
     "test": "./node_modules/.bin/_mocha",
     "autotest": "./node_modules/.bin/_mocha --watch"
   },
