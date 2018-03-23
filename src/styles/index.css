@@ -17,6 +17,18 @@
   background: url("../../../src/assets/md/street-calender.jpg") center center no-repeat;
   background-size: cover; }
 
+.about-us {
+  padding: 100px 0;
+  background: #f05f40;
+  text-align: center;
+  color: #fff; }
+
+.logo-branding {
+  padding: 150px 0;
+  background: #fff;
+  text-align: center;
+  color: #f05f40; }
+
 .dataa {
   display: block; }
 
