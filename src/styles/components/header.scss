@@ -1,16 +1,20 @@
-.menu-container{
-  margin:0 auto;
-  display: table;
-  position: relative;
-  .menu{
-    display: block;
-    padding: 10px 25px;
-    font-family: Tuna;
-    float: left;
-    color: black;
-    text-decoration: none;
-    &:hover{
+.header{
+  position: absolute;
+  top: 0;
+  .menu-container{
+    margin:0 auto;
+    display: table;
+    position: relative;
+    .menu{
+      display: block;
+      padding: 10px 25px;
+      font-family: Tuna;
+      float: left;
+      color: black;
       text-decoration: none;
+      &:hover{
+        text-decoration: none;
+      }
     }
   }
 }
