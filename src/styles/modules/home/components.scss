@@ -1,7 +1,9 @@
 .landing-banner{
   height: 100vh;
   background: url('../../../src/assets/md/street-calender.jpg') center center no-repeat;
+  background-color: rgba(88,169,196,.3);
   background-size: cover;
+  background-blend-mode: soft-light;
 }
 .about-us{
   padding: 100px 0;
