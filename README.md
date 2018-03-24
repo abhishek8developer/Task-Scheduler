@@ -31,6 +31,7 @@ npm run build
 ```
 
 This will build and uglify files to `dist/` ready to push to production.
+and need to change path in index.html of index.css from src/ to ./
 
 
 ## Server

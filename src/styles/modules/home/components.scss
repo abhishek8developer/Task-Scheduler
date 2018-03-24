@@ -1,6 +1,6 @@
 .landing-banner{
   height: calc(100vh - 40px);
-  background: url('../../../src/assets/md/street-calender.jpg') center center no-repeat;
+  background: url($base-url) center center no-repeat;
   background-size: cover;
 }
 .about-us{
