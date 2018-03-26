@@ -1,10 +1,15 @@
 import React from 'react';
+import Header from 'Components/header';
 
-const LandingBanner = () => (
+const LandingBanner = ({ showHeader, menuToggle }) => (
   <div className='col-xs-12'>
     <div className='row'>
       <div className='col-xs-12 landing-banner'>
         <div className='note'></div>
+        <div className='menu-icon' onClick={() => menuToggle()}>
+          <span className='glyphicon glyphicon-th'></span>
+        </div>
+        <Header showHeader={showHeader} />
       </div>
     </div>
     <div className='row'>

@@ -1,8 +1,8 @@
 
 import React from 'react';
 
-const Header = () =>
-  <div className='header'>
+const Header = ({ showHeader }) =>
+  <div className={`header ${showHeader ? 'show-menu' : 'hide-menu'}`}>
     <div className='row'>
       <div className='col-md-12'>
         <div className='menu-container'>

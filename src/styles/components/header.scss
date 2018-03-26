@@ -1,20 +1,32 @@
 .header{
   position: absolute;
   top: 0;
-  .menu-container{
-    margin:0 auto;
-    display: table;
-    position: relative;
-    .menu{
-      display: block;
-      padding: 10px 25px;
-      font-family: Tuna;
-      float: left;
-      color: black;
-      text-decoration: none;
-      &:hover{
+  width: calc(100% - 30px);
+  .row{
+    background: rgba(255,255,255,.6);
+    .menu-container{
+      margin:0 auto;
+      display: table;
+      position: relative;
+      .menu{
+        display: block;
+        padding: 10px 25px;
+        font-family: Tuna;
+        float: left;
+        color: black;
         text-decoration: none;
+        &:hover{
+          text-decoration: none;
+        }
       }
     }
   }
+}
+.show-menu {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+.hide-menu {
+  opacity: 0;
+  transition: opacity .3s ease;
 }

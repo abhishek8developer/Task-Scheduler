@@ -8,13 +8,21 @@ export class Home extends React.Component {
     super(props);
     this.state = {
       name: 'Abhi',
-      pass: '123'
+      pass: '123',
+      openHeader: false
     };
-  } 
+    this.openHeader = this.openHeader.bind(this);
+  }
+  openHeader() {
+    const { openHeader } = this.state;
+    this.setState({ openHeader: !openHeader });
+  }
   render() {
+    console.log(this.state, '=============');
+    const { openHeader } = this.state;
     return (
       <div className='row'>
-        <LandingBanner data={this.state.name} />
+        <LandingBanner showHeader={openHeader} menuToggle={() => this.openHeader()} />
       </div>
     );
   }
