@@ -4,6 +4,7 @@ const LandingBanner = () => (
   <div className='col-xs-12'>
     <div className='row'>
       <div className='col-xs-12 landing-banner'>
+        <div className='note'></div>
       </div>
     </div>
     <div className='row'>

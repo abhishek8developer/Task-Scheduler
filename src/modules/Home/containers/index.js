@@ -10,7 +10,7 @@ export class Home extends React.Component {
       name: 'Abhi',
       pass: '123'
     };
-  }
+  } 
   render() {
     return (
       <div className='row'>
