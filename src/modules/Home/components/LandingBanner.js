@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Header from 'Components/header';
 
 const LandingBanner = ({ showHeader, menuToggle }) => (
@@ -32,6 +32,8 @@ const LandingBanner = ({ showHeader, menuToggle }) => (
 );
 
 LandingBanner.propTypes = {
+  showHeader: PropTypes.bool,
+  menuToggle: PropTypes.func
 };
 
 export default LandingBanner;

@@ -18,7 +18,6 @@ export class Home extends React.Component {
     this.setState({ openHeader: !openHeader });
   }
   render() {
-    console.log(this.state, '=============');
     const { openHeader } = this.state;
     return (
       <div className='row'>
