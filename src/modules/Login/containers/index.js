@@ -11,8 +11,10 @@ export class Login extends React.Component {
       name: 'Abhi',
       pass: '123'
     };
+    this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit() {
+    console.log(this.props);
     this.props.onSubmit(this.state);
   }
   render() {
@@ -22,7 +24,7 @@ export class Login extends React.Component {
           state={this.state}
           onNameChange={(e) => this.setState({ name: e.target.value })}
           onPassChange={(e) => this.setState({ pass: e.target.value })}
-          onSubmit={this.onSubmit}
+          onSubmit={() => this.onSubmit}
         />
       </div>
     );

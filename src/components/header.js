@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const Header = ({ showHeader }) =>
   <div className={`header ${showHeader ? 'show-menu' : 'hide-menu'}`}>
@@ -13,6 +12,8 @@ const Header = ({ showHeader }) =>
     </div>
   </div>;
 
-Header.propTypes = {};
+Header.propTypes = {
+  showHeader: PropTypes.bool
+};
 
 export default Header;
