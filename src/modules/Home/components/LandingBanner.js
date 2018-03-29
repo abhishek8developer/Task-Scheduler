@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Header from 'Components/header';
 
-const LandingBanner = ({ showHeader, menuToggle }) => (
+const StaticHomeView = ({ showHeader, menuToggle }) => (
   <div className='col-xs-12'>
     <div className='row'>
       <div className='col-xs-12 landing-banner'>
@@ -10,6 +10,9 @@ const LandingBanner = ({ showHeader, menuToggle }) => (
           <span className='glyphicon glyphicon-th'></span>
         </div>
         <Header showHeader={showHeader} />
+        <div className='heading'>
+          TASK SCHEDULER
+        </div>
       </div>
     </div>
     <div className='row'>
@@ -31,7 +34,9 @@ const LandingBanner = ({ showHeader, menuToggle }) => (
   </div>
 );
 
-LandingBanner.propTypes = {
+StaticHomeView.propTypes = {
+  showHeader: PropTypes.bool,
+  menuToggle: PropTypes.func
 };
 
-export default LandingBanner;
+export default StaticHomeView;

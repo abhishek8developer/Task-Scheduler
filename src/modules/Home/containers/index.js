@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import LandingBanner from '../components/LandingBanner';
+import StaticHomeView from '../components/LandingBanner';
 import { changeName } from '../../../redux/actions';
 
 export class Home extends React.Component {
@@ -22,7 +22,7 @@ export class Home extends React.Component {
     const { openHeader } = this.state;
     return (
       <div className='row'>
-        <LandingBanner showHeader={openHeader} menuToggle={() => this.openHeader()} />
+        <StaticHomeView showHeader={openHeader} menuToggle={() => this.openHeader()} />
       </div>
     );
   }
