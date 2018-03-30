@@ -40,6 +40,18 @@
     .landing-banner .menu-icon span {
       padding: 3px;
       transform: scale(1.8); }
+  .landing-banner .heading {
+    margin-top: 35vh;
+    font-family: Tuna;
+    font-size: 6.5em;
+    text-align: center;
+    background: url(./assets/md/bernard-hermant-597482-unsplash.jpg);
+    background-size: contain;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+    user-select: none; }
 
 .about-us {
   padding: 100px 0;
