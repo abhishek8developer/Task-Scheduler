@@ -47,7 +47,7 @@
     text-align: center;
     background: url(./assets/md/bernard-hermant-597482-unsplash.jpg);
     background-size: contain;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.4);
     -webkit-background-clip: text;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
     font-weight: 900;
