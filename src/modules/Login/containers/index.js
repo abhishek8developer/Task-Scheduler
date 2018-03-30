@@ -14,10 +14,11 @@ export class Login extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit() {
-    console.log(this.props);
     this.props.onSubmit(this.state);
   }
   render() {
+    console.log(this.props.name);
+    const { data } = this.props.name;
     return (
       <div>
         <LoginForm
@@ -26,18 +27,29 @@ export class Login extends React.Component {
           onPassChange={(e) => this.setState({ pass: e.target.value })}
           onSubmit={() => this.onSubmit}
         />
+        <div>
+          {data ? data.map((val, i) => (
+            <div key={i}>
+              <h3>{i+1} {val.heading}</h3>
+              <span>{val.author}</span>
+            </div>
+          )): null}
+        </div>
       </div>
     );
   }
 }
 
 Login.propTypes = {
-  onSubmit: PropTypes.func
+  onSubmit: PropTypes.func,
+  name: PropTypes.shape({
+    data: PropTypes.Array
+  })
 };
 
 const mapStateToProps = (state) => {
   return {
-    name: state.login
+    name: state.login.name
   };
 };
 
